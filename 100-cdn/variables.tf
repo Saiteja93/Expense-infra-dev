@@ -14,12 +14,11 @@ variable "common_tags" {
     }
 }
 
-variable "app_alb_tags" {
+variable "frontend_tags" {
     default = {
-        Component = "app-alb"
+        Component = "frontend"
     }
 }
-
 
 variable "zone_name" {
     default = "saiteja-guvva.online"

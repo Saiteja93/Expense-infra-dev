@@ -1,25 +1,14 @@
-variable "project_name" {
-    default = "expense"
-}
-
-variable "environment" {
-    default = "dev"
-}
-
-variable "common_tags" {
-    default = {
-        Project = "expense"
-        Terraform = "true"
-        Environment = "dev"
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
     }
+  }
 }
 
-variable "frontend_tags" {
-    default = {
-        Component = "frontend"
-    }
+# Configure the AWS Provider
+provider "aws" {
+  region = "us-east-1"
 }
 
-variable "zone_name" {
-    default = "daws81s.online"
-}
